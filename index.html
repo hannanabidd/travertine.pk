@@ -81,8 +81,9 @@
     padding:26px 0; transition:all .4s ease;
   }
   header .wrap{display:flex; align-items:center; justify-content:space-between; gap:24px;}
-  .logo{font-family:'Fraunces',serif; font-size:20px; font-weight:600; color:var(--cream); letter-spacing:0.01em;}
-  .logo span{color:var(--vein); font-style:italic; font-weight:400;}
+  .logo{display:block; line-height:0;}
+  .logo-img{height:46px; width:auto; filter:brightness(0) invert(1); transition:height .4s ease;}
+  header.scrolled .logo-img{height:38px;}
   nav ul{list-style:none; display:flex; gap:40px;}
   nav a{font-size:13px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; color:rgba(246,241,230,0.75); position:relative; padding:4px 0;}
   nav a::after{content:''; position:absolute; left:0; right:100%; bottom:0; height:1px; background:var(--vein); transition:right .35s ease;}
@@ -370,8 +371,8 @@
   /* ===== FOOTER ===== */
   footer{background:var(--ink); color:rgba(228,217,195,0.7); padding:80px 0 30px; border-top:1px solid var(--line-dark); position:relative; overflow:hidden;}
   .foot-grid{display:grid; grid-template-columns:1.4fr 0.8fr 0.8fr 1fr; gap:48px; padding-bottom:64px; position:relative; z-index:2;}
-  .foot-logo{font-family:'Fraunces',serif; font-size:22px; color:var(--cream); margin-bottom:18px;}
-  .foot-logo span{font-style:italic; color:var(--vein); font-weight:400;}
+  .foot-logo{margin-bottom:22px; line-height:0;}
+  .foot-logo-img{height:52px; width:auto; filter:brightness(0) invert(1);}
   .foot-grid p{font-size:14px; line-height:1.7; max-width:280px; margin-bottom:24px; font-weight:300;}
   .foot-col h5{font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone-deep); margin-bottom:20px; font-weight:600;}
   .foot-col ul{list-style:none; display:flex; flex-direction:column; gap:12px;}
@@ -444,7 +445,7 @@
 
 <header id="siteHeader">
   <div class="wrap">
-    <a href="#top" class="logo">travertine<span>.pk</span></a>
+    <a href="#top" class="logo"><img class="logo-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/iDgzyGvHyDWkHZUO/marbelpk-high-resolution-logo-transparent-knqRoZdWBQ7LtnuM.png" alt="travertine.pk"></a>
     <nav>
       <ul>
         <li><a href="#top" aria-current="page">Home</a></li>
@@ -809,7 +810,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-logo">travertine<span>.pk</span></div>
+        <div class="foot-logo"><img class="foot-logo-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/iDgzyGvHyDWkHZUO/marbelpk-high-resolution-logo-transparent-knqRoZdWBQ7LtnuM.png" alt="travertine.pk"></div>
         <p>Quarry-to-export travertine specialists based in Loralai, Balochistan, with fabrication in Lahore, Pakistan. Raw blocks, cut slabs, and bespoke stone furnishings for architecture worldwide.</p>
       </div>
       <div class="foot-col">
