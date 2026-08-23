@@ -18,9 +18,9 @@ export default function HomePage() {
         <div className="divider" />
       </div>
       <Blocks />
+      <Stats />
       <Accessories />
       <Sustainability />
-      <Stats />
       <WhyUs />
       <Gallery />
       <Process />

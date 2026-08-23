@@ -40,7 +40,7 @@ export default function Footer() {
             <h5>Contact</h5>
             <ul>
               <li><a href="mailto:info@travertine.pk">info@travertine.pk</a></li>
-              <li><a href="tel:+923004107104">+92&nbsp;300&nbsp;4107104</a></li>
+              <li><a href="tel:+923328658650">+92&nbsp;332&nbsp;865&nbsp;8650</a></li>
               <li><Link href="/contact">Contact page →</Link></li>
             </ul>
           </div>
@@ -48,7 +48,7 @@ export default function Footer() {
         <div className="foot-bottom">
           <span>© 2026 travertine.pk. All rights reserved.</span>
           <div className="foot-socials">
-            <a href="https://wa.me/+923004107104">WhatsApp</a>
+            <a href="https://wa.me/+923328658650">WhatsApp</a>
             <a href="https://www.facebook.com/">Facebook</a>
             <a href="https://www.instagram.com/">Instagram</a>
           </div>
