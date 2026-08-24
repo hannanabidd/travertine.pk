@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { LuArrowRight } from 'react-icons/lu';
 
 const ITEMS = [
   {
@@ -73,9 +74,7 @@ export default function Accessories() {
           </p>
           <Link href="/contact" className="btn btn-light">
             Submit Your Design
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
+            <LuArrowRight size={16} />
           </Link>
         </div>
       </div>

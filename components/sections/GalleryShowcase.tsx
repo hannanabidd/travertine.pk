@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { LuX, LuPlus } from 'react-icons/lu';
 
 type Category = 'quarry' | 'interiors' | 'artifacts';
 type FilterKey = 'all' | Category;
@@ -109,7 +110,9 @@ export default function GalleryShowcase() {
                 sizes="(max-width: 768px) 50vw, (max-width: 900px) 33vw, 25vw"
               />
               <span className="g-cap">{item.cap}</span>
-              <span className="g-plus">+</span>
+              <span className="g-plus">
+                <LuPlus size={14} />
+              </span>
             </div>
           ))}
         </div>
@@ -130,9 +133,7 @@ export default function GalleryShowcase() {
             setLightboxSrc(null);
           }}
         >
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path d="M3 3l12 12M15 3L3 15" stroke="currentColor" strokeWidth="1.5" />
-          </svg>
+          <LuX size={18} />
         </button>
         {active && (
           <div

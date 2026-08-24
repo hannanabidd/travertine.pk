@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { LuArrowRight } from 'react-icons/lu';
 
 const CLOSING_SRC =
   '/images/raw-stone-11.jpg';
@@ -46,15 +47,11 @@ export default function Closing() {
         <div className="closing-ctas reveal">
           <Link href="/contact" className="btn btn-primary">
             Request a Sample
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
+            <LuArrowRight size={16} />
           </Link>
           <Link href="/contact" className="btn btn-light">
             Contact Our Export Team
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
+            <LuArrowRight size={16} />
           </Link>
         </div>
       </div>

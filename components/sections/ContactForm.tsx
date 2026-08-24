@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import { LuArrowRight } from 'react-icons/lu';
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -72,9 +73,7 @@ export default function ContactForm() {
 
       <button type="submit" className="btn btn-primary">
         Send Enquiry
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
+        <LuArrowRight size={16} />
       </button>
       <p className="form-note">
         This opens your email client with your enquiry pre-filled, addressed to info@travertine.pk.

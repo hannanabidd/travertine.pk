@@ -1,44 +1,13 @@
 import Image from 'next/image';
+import { LuGem, LuCompass, LuMapPin } from 'react-icons/lu';
 
 const QUARRY_SRC =
   'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=1000,fit=crop/iDgzyGvHyDWkHZUO/20240818_151659-mxB2lWjr5jh2WnnL.jpg';
 
 const FACTS = [
-  {
-    label: 'Natural Stone',
-    detail: 'Sourced from Balochistan',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <path d="M17 4l11 6.5v13L17 30 6 23.5v-13L17 4z" stroke="#b08347" strokeWidth="1.3" strokeLinejoin="round" />
-        <path d="M17 4v26M6 10.5L17 17l11-6.5" stroke="#b08347" strokeWidth="1.3" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Bespoke',
-    detail: 'Residential & Commercial',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <circle cx="10" cy="24" r="3" stroke="#b08347" strokeWidth="1.3" />
-        <path d="M12.2 21.8L25 9M25 9l-6 1M25 9l-1 6" stroke="#b08347" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Crafted in Lahore',
-    detail: 'Fabrication & Finishing',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <path
-          d="M17 4a8.5 8.5 0 018.5 8.5c0 6.5-8.5 16.5-8.5 16.5S8.5 19 8.5 12.5A8.5 8.5 0 0117 4z"
-          stroke="#b08347"
-          strokeWidth="1.3"
-          strokeLinejoin="round"
-        />
-        <circle cx="17" cy="12.5" r="3" stroke="#b08347" strokeWidth="1.3" />
-      </svg>
-    ),
-  },
+  { label: 'Natural Stone', detail: 'Sourced from Balochistan', icon: <LuGem /> },
+  { label: 'Bespoke', detail: 'Residential & Commercial', icon: <LuCompass /> },
+  { label: 'Crafted in Lahore', detail: 'Fabrication & Finishing', icon: <LuMapPin /> },
 ];
 
 export default function BrandIntro() {

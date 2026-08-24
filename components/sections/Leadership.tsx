@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { LuArrowRight } from 'react-icons/lu';
 
 export default function Leadership() {
   return (
@@ -23,9 +24,7 @@ export default function Leadership() {
             </p>
             <Link href="/contact" className="leader-link">
               Get in touch with our sales team
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
+              <LuArrowRight size={14} />
             </Link>
           </div>
         </div>

@@ -1,37 +1,21 @@
 import Link from 'next/link';
+import { LuArrowRight, LuLayers, LuLayoutGrid, LuScissors } from 'react-icons/lu';
 
 const PRODUCTS = [
   {
     title: 'Slabs',
     body: 'Full-size travertine and marble slabs for facades, flooring, and large-format cladding, cut to consistent thickness and finish.',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <rect x="5" y="5" width="24" height="24" stroke="#b08347" strokeWidth="1.2" />
-        <path d="M5 13h24M5 21h24" stroke="#b08347" strokeWidth="1.2" />
-      </svg>
-    ),
+    icon: <LuLayers />,
   },
   {
     title: 'Tiles',
     body: 'Standard and custom tile formats for interior and exterior surfaces, matched for colour and veining across the full order.',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <rect x="4" y="4" width="11" height="11" stroke="#b08347" strokeWidth="1.2" />
-        <rect x="19" y="4" width="11" height="11" stroke="#b08347" strokeWidth="1.2" />
-        <rect x="4" y="19" width="11" height="11" stroke="#b08347" strokeWidth="1.2" />
-        <rect x="19" y="19" width="11" height="11" stroke="#b08347" strokeWidth="1.2" />
-      </svg>
-    ),
+    icon: <LuLayoutGrid />,
   },
   {
     title: 'Custom-Cut Stone',
     body: "Bespoke dimensions and profiles for architectural and interior applications, cut to your project's exact drawings.",
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <path d="M6 6l22 22M28 6L6 28" stroke="#b08347" strokeWidth="1.2" strokeLinecap="round" />
-        <circle cx="17" cy="17" r="4" stroke="#b08347" strokeWidth="1.2" />
-      </svg>
-    ),
+    icon: <LuScissors />,
   },
 ];
 
@@ -68,9 +52,7 @@ export default function OurProducts() {
           </p>
           <Link href="/contact" className="btn btn-light">
             Discuss Your Project
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
+            <LuArrowRight size={16} />
           </Link>
         </div>
       </div>

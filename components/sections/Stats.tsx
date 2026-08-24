@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { LuGlobe, LuClock, LuScale, LuCircleCheck } from 'react-icons/lu';
 
 interface StatDef {
   target: number;
@@ -10,51 +11,10 @@ interface StatDef {
 }
 
 const STATS: StatDef[] = [
-  {
-    target: 30,
-    suffix: '+',
-    label: 'Countries Served',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <circle cx="17" cy="17" r="15.5" stroke="currentColor" strokeWidth="1.3" />
-        <path d="M17 1.5c4 4.2 6 9.6 6 15.5s-2 11.3-6 15.5c-4-4.2-6-9.6-6-15.5s2-11.3 6-15.5z" stroke="currentColor" strokeWidth="1.3" />
-        <path d="M2.5 17h29" stroke="currentColor" strokeWidth="1.3" />
-      </svg>
-    ),
-  },
-  {
-    target: 10,
-    suffix: '+',
-    label: 'Years of Export Experience',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <circle cx="17" cy="17" r="15.5" stroke="currentColor" strokeWidth="1.3" />
-        <path d="M17 9v8l6 3.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    target: 25,
-    suffix: 'T+',
-    label: 'Maximum Block Weight Supplied',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <path d="M17 4v26M9 8h16" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-        <path d="M4 8l5 10a5 5 0 01-10 0l5-10zM25 8l5 10a5 5 0 01-10 0l5-10z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    target: 500,
-    suffix: '+',
-    label: 'Projects Completed Globally',
-    icon: (
-      <svg viewBox="0 0 34 34" fill="none">
-        <circle cx="17" cy="17" r="15.5" stroke="currentColor" strokeWidth="1.3" />
-        <path d="M10 17.5l4.5 4.5 9-10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
+  { target: 30, suffix: '+', label: 'Countries Served', icon: <LuGlobe /> },
+  { target: 10, suffix: '+', label: 'Years of Export Experience', icon: <LuClock /> },
+  { target: 25, suffix: 'T+', label: 'Maximum Block Weight Supplied', icon: <LuScale /> },
+  { target: 500, suffix: '+', label: 'Projects Completed Globally', icon: <LuCircleCheck /> },
 ];
 
 function StatItem({ target, suffix, label, icon }: StatDef) {

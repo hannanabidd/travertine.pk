@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { LuCircleCheck } from 'react-icons/lu';
 import PageIntroBackground from '@/components/layout/PageIntroBackground';
 import ContactForm from '@/components/sections/ContactForm';
 import ContactInfo from '@/components/sections/ContactInfo';
@@ -75,10 +76,7 @@ export default function ContactPage() {
           <ul className="check-list reveal">
             {CHECKLIST.map((item) => (
               <li key={item}>
-                <svg viewBox="0 0 20 20" fill="none">
-                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" strokeWidth="1.3" />
-                  <path d="M6.5 10.2l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <LuCircleCheck />
                 {item}
               </li>
             ))}
