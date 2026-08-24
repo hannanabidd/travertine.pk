@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const BLOCK_SRC =
-  'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=1000,fit=crop/iDgzyGvHyDWkHZUO/img-20250920-wa0085-mePg1M5BpWiX7kBV.jpg';
+const BLOCK_SRC = '/images/raw-stone-06.jpg';
 
 const APPLICATIONS = [
   'Exterior façades and monumental cladding',
@@ -34,7 +33,7 @@ export default function Blocks() {
           <div className="blocks-visual">
             <Image
               src={BLOCK_SRC}
-              alt="A worker beside a freshly quarried raw travertine block, showing its natural scale"
+              alt="A massive raw travertine block freshly cut at the quarry face, stacked and ready for transport"
               fill
               sizes="(max-width: 1024px) 100vw, 660px"
             />

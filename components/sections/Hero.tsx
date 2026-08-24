@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const HERO_SRC =
-  'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/iDgzyGvHyDWkHZUO/20240818_150902-A3QlPgawQWck5OD8.jpg';
+const HERO_SRC = '/images/raw-stone-09.jpg';
 
 export default function Hero() {
   return (
@@ -10,7 +9,7 @@ export default function Hero() {
       <Image
         className="hero-photo"
         src={HERO_SRC}
-        alt="Raw travertine quarry excavation face in Loralai, Balochistan, showing natural banded stone strata"
+        alt="Raw travertine quarry wall in Loralai, Balochistan, showing natural banded stone strata and a reflective water pool"
         fill
         sizes="100vw"
         preload

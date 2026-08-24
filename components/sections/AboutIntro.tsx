@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import PageIntroBackground from '@/components/layout/PageIntroBackground';
 
 export default function AboutIntro() {
   return (
     <section className="page-intro">
+      <PageIntroBackground />
       <div className="wrap">
         <div className="breadcrumb reveal">
           <Link href="/">Home</Link>

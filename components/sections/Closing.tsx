@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const CLOSING_SRC =
-  'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,h=1100,fit=crop/iDgzyGvHyDWkHZUO/img-20241031-wa0014-AVLxz180e4CkNzr0.jpg';
+  '/images/raw-stone-11.jpg';
 
 export default function Closing() {
   return (
