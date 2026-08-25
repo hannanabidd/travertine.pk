@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import PageIntroBackground from '@/components/layout/PageIntroBackground';
 import GalleryShowcase from '@/components/sections/GalleryShowcase';
 import { LuArrowRight } from 'react-icons/lu';
+
+const PHOTO_SRC = '/images/raw-stone-03.jpg';
 
 export const metadata: Metadata = {
   title: 'Gallery',
@@ -38,22 +41,33 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <GalleryShowcase />
+      <div className="photo-band">
+        <Image
+          className="photo-band-img"
+          src={PHOTO_SRC}
+          alt="Large travertine block stack with quarry crane machinery in the background"
+          fill
+          sizes="100vw"
+        />
+        <div className="photo-band-scrim" />
 
-      <section className="sec-pad">
-        <div className="wrap">
-          <div className="advantage-strip reveal">
-            <p>
-              Every image here is our own material and our own work. Request physical samples before
-              you specify a project.
-            </p>
-            <Link href="/contact" className="btn btn-light">
-              Request a Sample
-              <LuArrowRight size={16} />
-            </Link>
+        <GalleryShowcase />
+
+        <section className="sec-pad">
+          <div className="wrap">
+            <div className="advantage-strip reveal">
+              <p>
+                Every image here is our own material and our own work. Request physical samples before
+                you specify a project.
+              </p>
+              <Link href="/contact" className="btn btn-light">
+                Request a Sample
+                <LuArrowRight size={16} />
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }

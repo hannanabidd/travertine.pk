@@ -1,5 +1,8 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { LuArrowRight, LuLayers, LuLayoutGrid, LuScissors } from 'react-icons/lu';
+
+const PHOTO_SRC = '/images/raw-stone-03.jpg';
 
 const PRODUCTS = [
   {
@@ -21,10 +24,18 @@ const PRODUCTS = [
 
 export default function OurProducts() {
   return (
-    <section className="sec-pad" id="products">
+    <section className="sec-pad photo-band" id="products">
+      <Image
+        className="photo-band-img"
+        src={PHOTO_SRC}
+        alt="Quarry wall corner showing banded travertine strata above a reflective water pool"
+        fill
+        sizes="100vw"
+      />
+      <div className="photo-band-scrim" />
       <div className="wrap">
-        <div className="eyebrow reveal">Our Products</div>
-        <div className="kicker-row reveal">
+        <div className="eyebrow">Our Products</div>
+        <div className="kicker-row">
           <h2>
             Premium Travertine & Marble,
             <br />
@@ -35,7 +46,7 @@ export default function OurProducts() {
             rigorous standards of texture, finish, and structural integrity.
           </p>
         </div>
-        <div className="why-grid reveal">
+        <div className="why-grid">
           {PRODUCTS.map((product) => (
             <div className="why-card" key={product.title}>
               <div className="mark">{product.icon}</div>

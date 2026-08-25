@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { LuGlobe, LuClock, LuScale, LuCircleCheck } from 'react-icons/lu';
+
+const PHOTO_SRC = '/images/raw-stone-03.jpg';
 
 interface StatDef {
   target: number;
@@ -73,14 +76,22 @@ function StatItem({ target, suffix, label, icon }: StatDef) {
 export default function Stats() {
   return (
     <section className="stats-bar">
+      <Image
+        className="stats-photo"
+        src={PHOTO_SRC}
+        alt="Two stacked raw travertine blocks with a crane visible in the background at the quarry"
+        fill
+        sizes="100vw"
+      />
+      <div className="stats-scrim" />
       <div className="wrap">
-        <div className="eyebrow reveal">By the Numbers</div>
-        <h2 className="stats-heading reveal">
+        <div className="eyebrow">By the Numbers</div>
+        <h2 className="stats-heading">
           The Numbers Behind
           <br />
           Our Reputation.
         </h2>
-        <div className="stats-grid reveal">
+        <div className="stats-grid">
           {STATS.map((s) => (
             <StatItem key={s.label} {...s} />
           ))}

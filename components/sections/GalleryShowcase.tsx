@@ -23,7 +23,7 @@ const FILTERS: { key: FilterKey; label: string }[] = [
 ];
 
 const ITEMS: GalleryItem[] = [
-  { category: 'quarry', src: '/images/raw-stone-12.png', alt: 'Quarry landscape in Loralai with mountain peak, a loaded truck, and stacked raw blocks', cap: 'The quarry, Loralai, Balochistan' },
+  { category: 'quarry', src: '/images/raw-stone-02.jpg', alt: 'Quarry landscape in Loralai with mountain peak, a loaded truck, and stacked raw blocks', cap: 'The quarry, Loralai, Balochistan' },
   { category: 'quarry', src: '/images/raw-stone-13.png', alt: 'Raw travertine block suspended from a crane hook, marked with quarry identification tags', cap: 'Freshly extracted block, tagged' },
   { category: 'quarry', src: '/images/raw-stone-03.jpg', alt: 'Quarry wall corner showing banded travertine strata above a reflective water pool', cap: 'Extraction face, corner cut' },
   { category: 'quarry', src: '/images/raw-stone-07.jpg', alt: 'Rough-cut travertine block beside processing machinery at the quarry', cap: 'Rough block, ready for transport' },
