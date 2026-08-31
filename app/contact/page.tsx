@@ -63,7 +63,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="sec-pad" style={{ paddingTop: 0 }}>
+      {/* <section className="sec-pad" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="divider reveal" style={{ marginBottom: 64 }} />
           <div className="eyebrow reveal">Before You Write In</div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
             ))}
           </ul>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
