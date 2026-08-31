@@ -8,13 +8,12 @@ import { usePathname } from 'next/navigation';
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
+  // { href: '/projects', label: 'Projects' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/contact', label: 'Contact' },
 ];
 
-const LOGO_SRC =
-  'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/iDgzyGvHyDWkHZUO/marbelpk-high-resolution-logo-transparent-knqRoZdWBQ7LtnuM.png';
+const LOGO_SRC = '/images/Logo_White.png';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,8 +37,8 @@ export default function Header() {
               className="logo-img"
               src={LOGO_SRC}
               alt="travertine.pk"
-              width={375}
-              height={270}
+              width={1566}
+              height={1445}
               preload
             />
           </Link>

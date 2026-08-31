@@ -85,8 +85,8 @@ header {
 }
 header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo { display: block; line-height: 0; }
-.logo-img { height: 46px; width: auto; filter: brightness(0) invert(1); transition: height .4s ease; }
-header.scrolled .logo-img { height: 38px; }
+.logo-img { height: 70px; width: auto; transition: height .4s ease; }
+header.scrolled .logo-img { height: 60px; }
 nav ul { list-style: none; display: flex; gap: 40px; }
 nav a { font-size: 16px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(246, 241, 230, 0.75); position: relative; padding: 4px 0; }
 nav a::after { content: ''; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px; background: var(--vein); transition: right .35s ease; }
@@ -554,7 +554,7 @@ section[id] { scroll-margin-top: 100px; }
 footer { background: var(--ink); color: rgba(228, 217, 195, 0.7); padding: 80px 0 30px; border-top: 1px solid var(--line-dark); position: relative; overflow: hidden; }
 .foot-grid { display: grid; grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr; gap: 48px; padding-bottom: 64px; position: relative; z-index: 2; }
 .foot-logo { margin-bottom: 22px; line-height: 0; }
-.foot-logo-img { height: 52px; width: auto; filter: brightness(0) invert(1); }
+.foot-logo-img { height: 100px; width: auto; }
 .foot-grid p { font-size: 14px; line-height: 1.7; max-width: 280px; margin-bottom: 24px; font-weight: 300; }
 .foot-col h5 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone-deep); margin-bottom: 20px; font-weight: 600; }
 .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }

@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const LOGO_SRC =
-  'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/iDgzyGvHyDWkHZUO/marbelpk-high-resolution-logo-transparent-knqRoZdWBQ7LtnuM.png';
+const LOGO_SRC = '/images/Logo_White.png';
 
 export default function Footer() {
   return (
@@ -11,7 +10,7 @@ export default function Footer() {
         <div className="foot-grid">
           <div>
             <div className="foot-logo">
-              <Image className="foot-logo-img" src={LOGO_SRC} alt="travertine.pk" width={375} height={270} />
+              <Image className="foot-logo-img" src={LOGO_SRC} alt="travertine.pk" width={1566} height={1445} />
             </div>
             <p>
               Quarry-to-export travertine specialists based in Loralai, Balochistan, with fabrication in
