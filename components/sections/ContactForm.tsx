@@ -3,32 +3,47 @@
 import { useState, type FormEvent } from 'react';
 import { LuArrowRight } from 'react-icons/lu';
 
+type Status = 'idle' | 'submitting' | 'success' | 'error';
+
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const name = data.get('name') as string;
-    const email = data.get('email') as string;
-    const phone = data.get('phone') as string;
-    const company = data.get('company') as string;
-    const message = data.get('message') as string;
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      name: data.get('name') as string,
+      email: data.get('email') as string,
+      phone: data.get('phone') as string,
+      company: data.get('company') as string,
+      message: data.get('message') as string,
+    };
 
-    const subject = `New enquiry from ${name}`;
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : null,
-      company ? `Company: ${company}` : null,
-      '',
-      message,
-    ]
-      .filter(Boolean)
-      .join('\n');
+    setStatus('submitting');
+    setErrorMessage('');
 
-    window.location.href = `mailto:info@travertine.pk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSubmitted(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json();
+
+      if (!res.ok) {
+        setStatus('error');
+        setErrorMessage(result.error || 'Something went wrong. Please try again or email us directly.');
+        return;
+      }
+
+      setStatus('success');
+      form.reset();
+    } catch {
+      setStatus('error');
+      setErrorMessage('Something went wrong. Please try again or email us directly.');
+    }
   }
 
   return (
@@ -71,23 +86,30 @@ export default function ContactForm() {
         />
       </div>
 
-      <button type="submit" className="btn btn-primary">
-        Send Enquiry
+      <button type="submit" className="btn btn-primary" disabled={status === 'submitting'}>
+        {status === 'submitting' ? 'Sending...' : 'Send Enquiry'}
         <LuArrowRight size={16} />
       </button>
       <p className="form-note">
-        This opens your email client with your enquiry pre-filled, addressed to info@travertine.pk.
         Prefer WhatsApp? Message us at{' '}
         <a href="https://wa.me/+923328658650" style={{ color: 'var(--vein)', fontWeight: 600 }}>
           +92 332 865 8650
         </a>
-        .
+        , or email{' '}
+        <a href="mailto:info@travertine.pk" style={{ color: 'var(--vein)', fontWeight: 600 }}>
+          info@travertine.pk
+        </a>{' '}
+        directly.
       </p>
 
-      {submitted && (
+      {status === 'success' && (
         <div className="form-success" role="status">
-          Your email client should now be open with your enquiry ready to send. If nothing happened,
-          email us directly at info@travertine.pk.
+          Thanks, your enquiry has been sent. We respond within one business day.
+        </div>
+      )}
+      {status === 'error' && (
+        <div className="form-error" role="alert">
+          {errorMessage}
         </div>
       )}
     </form>
