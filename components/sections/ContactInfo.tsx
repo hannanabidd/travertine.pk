@@ -41,10 +41,10 @@ export default function ContactInfo() {
         <a href="https://wa.me/+923328658650" aria-label="WhatsApp">
           <FaWhatsapp size={16} />
         </a>
-        <a href="https://www.facebook.com/" aria-label="Facebook">
+        <a href="https://www.facebook.com/share/1FHE4e1YMg/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
           <FaFacebook size={16} />
         </a>
-        <a href="https://www.instagram.com/" aria-label="Instagram">
+        <a href="https://www.instagram.com/travertinepk" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
           <FaInstagram size={16} />
         </a>
       </div>

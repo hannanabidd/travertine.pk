@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa6';
 
 const LOGO_SRC = '/images/Logo_White.png';
 
@@ -23,7 +24,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About</Link></li>
-              <li><Link href="/projects">Projects</Link></li>
+              <li><Link href="/accessories">Accessories</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
             </ul>
           </div>
@@ -31,7 +32,7 @@ export default function Footer() {
             <h5>Stone</h5>
             <ul>
               <li><Link href="/#blocks">Blocks</Link></li>
-              <li><Link href="/#accessories">Accessories</Link></li>
+              <li><Link href="/accessories">Accessories</Link></li>
               <li><Link href="/#process">Process</Link></li>
             </ul>
           </div>
@@ -47,9 +48,15 @@ export default function Footer() {
         <div className="foot-bottom">
           <span>© 2026 travertine.pk. All rights reserved.</span>
           <div className="foot-socials">
-            <a href="https://wa.me/+923328658650">WhatsApp</a>
-            <a href="https://www.facebook.com/">Facebook</a>
-            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://wa.me/+923328658650" aria-label="WhatsApp">
+              <FaWhatsapp size={16} />
+            </a>
+            <a href="https://www.facebook.com/share/1FHE4e1YMg/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <FaFacebook size={16} />
+            </a>
+            <a href="https://www.instagram.com/travertinepk" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={16} />
+            </a>
           </div>
         </div>
       </div>

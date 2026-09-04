@@ -36,7 +36,7 @@ const ITEMS: GalleryItem[] = [
 
   { category: 'interiors', src: '/images/interior07.png', alt: 'Modern house facade clad in travertine with a curved tower and ornate iron gate', cap: 'Exterior cladding, curved tower' },
   { category: 'interiors', src: '/images/interior03.png', alt: 'Living room feature wall in organic-cut travertine slab with a butterfly pattern beneath a chandelier', cap: 'Feature wall, formal living room' },
-  { category: 'interiors', src: '/images/interior10.png', alt: 'Formal dining room with an organic-edge travertine table top on a stacked-disc pedestal', cap: 'Dining table, bespoke pedestal' },
+  { category: 'interiors', src: '/images/interior10.png', alt: 'Living room with an organic-edge travertine coffee table on a stacked-disc pedestal, flanked by sofas', cap: 'Coffee table, bespoke pedestal' },
   { category: 'interiors', src: '/images/interior08.png', alt: 'Grand foyer with travertine-clad walls, a carved wooden door, and a staircase', cap: 'Entrance foyer and staircase' },
   { category: 'interiors', src: '/images/interior05.png', alt: 'Shower wall with an organic-cut travertine slab centerpiece', cap: 'Bathroom feature wall' },
   { category: 'interiors', src: '/images/interior02.png', alt: 'Foyer with a wooden door, travertine walls, and a dark and gold stone floor inlay', cap: 'Entrance hall, floor inlay' },
