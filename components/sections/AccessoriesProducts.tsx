@@ -7,7 +7,7 @@ const PRODUCTS = [
     title: 'Travertine Bathtub',
     body: 'Hand-finished freestanding tub in natural travertine. Solid construction with polished or honed interior surface.',
     specs: '≥ 1,000 kg incl. packing · FOB Karachi · Custom sizing',
-    src: '/images/bathtub.png',
+    src: '/images/bath-tub-accessories.png',
     alt: 'Hand-finished freestanding travertine bathtub with a rough-hewn exterior and polished interior basin',
     artifact: true,
   },
