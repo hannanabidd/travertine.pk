@@ -15,7 +15,7 @@ const PRODUCTS = [
     title: 'Dining Table Top',
     body: '2″ slab in natural travertine, hollowed from beneath, reducing shipping weight by over 75% while preserving full surface integrity, vein, and pattern.',
     specs: '96″ × 40″ · 2″ thick face · < 250 kg shipped · Hollow-core base',
-    src: '/images/interior11.png',
+    src: '/images/table-top-accessories.png',
     alt: 'Natural travertine slab face showing consistent grain and vein pattern',
     artifact: false,
   },
