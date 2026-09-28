@@ -548,7 +548,7 @@ section[id] { scroll-margin-top: 100px; }
 .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 56px; }
 .product-card { border: 1px solid var(--line); border-radius: 2px; overflow: hidden; background: var(--cream); }
 .product-media { position: relative; aspect-ratio: 4/3; background: var(--stone); }
-.product-media img { object-fit: cover; }
+/* .product-media img { object-fit: cover; } */
 .product-media.artifact { background: radial-gradient(ellipse 85% 75% at 50% 42%, var(--cream) 0%, var(--stone) 100%); }
 .product-media.artifact img { object-fit: contain; padding: 8%; }
 .product-body { padding: 32px; }
